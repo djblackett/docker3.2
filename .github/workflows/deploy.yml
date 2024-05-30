@@ -6,14 +6,14 @@ on:
   push:
     branches:
       - main
-
+g
 jobs:
   pipeline:
     name: Publish app to cloud
     runs-on: ubuntu-latest
     steps:
       # Checkout to the repository
-      - uses: workflows/checkout@v4
+      - uses: workflows/checkout@v3
 
   deployment:
     name: Deploy app
