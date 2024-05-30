@@ -8,12 +8,12 @@ on:
       - main
 
 jobs:
-  pipeline:
-    name: Publish app to cloud
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout to the repository
-      - uses: actions/checkout@v4
+#  pipeline:
+#    name: Publish app to cloud
+#    runs-on: ubuntu-latest
+#    steps:
+#      # Checkout to the repository
+#      - uses: actions/checkout@v4
 
 
   deployment:
@@ -22,7 +22,7 @@ jobs:
     if: ${{ github.event_name == 'push' && !contains(join(toJson(github.event.commits.*.message)), '# skip') }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: superfly/flyctl-actions/setup-flyctl@master
       - run: flyctl deploy --remote-only
         env:
