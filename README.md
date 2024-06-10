@@ -1,2 +1,2 @@
-Deployed at https://fly.io/apps/devops-course-page
+Deployed at https://devops-course-page.fly.dev/
 Github repo: https://github.com/djblackett/docker3.2
